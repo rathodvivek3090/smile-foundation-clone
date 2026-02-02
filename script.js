@@ -71,6 +71,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mobile Menu Logic
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.main-nav');
+
+    if (mobileBtn && nav) {
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const icon = mobileBtn.querySelector('i');
+            if (icon) {
+                if (nav.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+
+        // Close menu when clicking a link
+        nav.querySelectorAll('a:not(.dropdown-btn)').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                const icon = mobileBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    // Mobile Dropdown Logic
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector('.dropdown-btn');
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
     // Privacy/FAQ Accordion logic if present
     const faqQuestions = document.querySelectorAll('.faq-question');
     if (faqQuestions.length > 0) {

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - ACT Foundation</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,11 +18,35 @@
     <header id="main-header" class="header">
         <div class="container header-content">
             <div class="logo">ACT Foundation</div>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav class="main-nav">
                 <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn" style="color: var(--primary-color);">About <i
+                            class="fas fa-chevron-down" style="font-size: 0.8em;"></i></button>
+                    <div class="dropdown-content">
+                        <a href="about.html" class="active" style="color: var(--primary-color);">About Us</a>
+                        <a href="vision.html">Vision & Mission</a>
+                        <a href="how_we_work.html">How We Work</a>
+                    </div>
+                </div>
+
+                <a href="programs.html">Programs</a>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn">Partners <i class="fas fa-chevron-down"
+                            style="font-size: 0.8em;"></i></button>
+                    <div class="dropdown-content">
+                        <a href="csr.html">CSR Partnerships</a>
+                        <a href="compliance.html">Compliance</a>
+                        <a href="faq.html">Corporate FAQ</a>
+                    </div>
+                </div>
+
                 <a href="contact.html">Contact</a>
-                <a href="faq.html">FAQ</a>
                 <a href="index.html#donation-form" class="btn btn-primary">Support a Cause</a>
             </nav>
         </div>
@@ -33,7 +56,7 @@
         <section class="page-hero">
             <div class="container">
                 <h1>About ACT Foundation</h1>
-                <p>Committed to inclusive development, social equity, and community-led change.</p>
+                <p>Committed to inclusive development and social equity.</p>
             </div>
         </section>
 
@@ -48,6 +71,8 @@
                         professionals, and corporate partners to act collectively for social good.</p>
                 </div>
 
+                <div class="divider"></div>
+
                 <div class="content-block">
                     <h2>Why We Exist</h2>
                     <p>Despite progress, millions in India continue to face barriers to basic education, healthcare,
@@ -55,96 +80,6 @@
                         and vulnerable communities.</p>
                     <p>ACT Foundation exists to bridge gaps through community-driven initiatives that are ethical,
                         accountable, and sustainable.</p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Vision, Mission & Values</h2>
-                    <h3>Vision</h3>
-                    <p>An India where every individual has access to education, health, dignity, and a safe environment.
-                    </p>
-
-                    <h3>Mission</h3>
-                    <p>To mobilise collective action and partnerships to empower communities through sustainable social
-                        interventions.</p>
-
-                    <h3>Core Values</h3>
-                    <ul class="values-list">
-                        <li>Community-first approach</li>
-                        <li>Transparency and accountability</li>
-                        <li>Equity and inclusion</li>
-                        <li>Collaboration and shared responsibility</li>
-                        <li>Sustainability and long-term impact</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>Programs & Initiatives</h2>
-
-                    <h3>Education Programs</h3>
-                    <ul class="program-list">
-                        <li>Community learning centres</li>
-                        <li>School support and digital education access</li>
-                        <li>Youth skill development and career awareness</li>
-                        <li>Parent and community engagement</li>
-                    </ul>
-
-                    <h3>Health Programs</h3>
-                    <ul class="program-list">
-                        <li>Preventive health camps and screenings</li>
-                        <li>Nutrition, hygiene, and maternal health awareness</li>
-                        <li>Mental health sensitisation</li>
-                    </ul>
-
-                    <h3>Women Empowerment Programs</h3>
-                    <ul class="program-list">
-                        <li>Skill training and livelihood support</li>
-                        <li>Health, legal, and financial literacy</li>
-                        <li>Support for self-help groups and local leadership</li>
-                    </ul>
-
-                    <h3>Environmental Programs</h3>
-                    <ul class="program-list">
-                        <li>Tree plantation and conservation drives</li>
-                        <li>Waste segregation and cleanliness campaigns</li>
-                        <li>Environmental education at community level</li>
-                    </ul>
-                </div>
-
-                <div class="content-block">
-                    <h2>How We Work</h2>
-                    <ol class="work-list">
-                        <li>Community needs assessment</li>
-                        <li>Program design with local participation</li>
-                        <li>Resource mobilisation (donations, CSR, partnerships)</li>
-                        <li>Transparent implementation</li>
-                        <li>Impact monitoring and reporting</li>
-                    </ol>
-                    <p>ACT Foundation maintains compliance with applicable Indian laws and ethical standards, ensuring
-                        donor trust and accountability.</p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Statutory Compliance & Credibility</h2>
-                    <p><strong>Registration & Legal Status:</strong> ACT Foundation is a duly registered non-profit
-                        organisation in India, established with the objective of undertaking charitable activities in
-                        the areas of education, healthcare, women empowerment, and environmental sustainability.</p>
-                    <p><strong>Section 12A Registration:</strong> Applied for and under process. We operate strictly on
-                        a not-for-profit basis.</p>
-                    <p><strong>Section 80G Certification:</strong> Applied for and under process. Once approved, donors
-                        will be eligible for tax deductions.</p>
-                    <p><strong>CSR Eligibility:</strong> Initiated process to be recognised as an eligible CSR
-                        implementation agency. We align with Schedule VII activities.</p>
-                </div>
-
-                <div class="content-block">
-                    <h2>Governance & Accountability</h2>
-                    <p>ACT Foundation follows strong governance practices to maintain donor and partner trust:</p>
-                    <ul>
-                        <li>Clear separation of governance and execution roles</li>
-                        <li>Regular financial oversight and internal controls</li>
-                        <li>Transparent utilisation of funds</li>
-                        <li>Documentation and reporting aligned with regulatory norms</li>
-                    </ul>
                 </div>
             </div>
         </section>

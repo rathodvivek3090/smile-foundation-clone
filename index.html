@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACT Foundation - Acting Together for Stronger Communities</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,205 +15,188 @@
 </head>
 
 <body>
-    <div id="app">
-        <header id="main-header" class="header">
-            <div class="container header-content">
-                <div class="logo">ACT Foundation</div>
-                <nav class="main-nav">
-                    <a href="index.html" class="active">Home</a>
+    <header id="main-header" class="header">
+        <div class="container header-content">
+            <div class="logo">ACT Foundation</div>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <a href="index.html" class="active">Home</a>
 
-                    <div class="dropdown">
-                        <button class="dropdown-btn">About <i class="fas fa-chevron-down"
-                                style="font-size: 0.8em;"></i></button>
-                        <div class="dropdown-content">
-                            <a href="about.html">About Us</a>
-                            <a href="vision.html">Vision & Mission</a>
-                            <a href="how_we_work.html">How We Work</a>
-                        </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">About <i class="fas fa-chevron-down"
+                            style="font-size: 0.8em;"></i></button>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="vision.html">Vision & Mission</a>
+                        <a href="how_we_work.html">How We Work</a>
                     </div>
+                </div>
 
-                    <a href="programs.html">Programs</a>
+                <a href="programs.html">Programs</a>
 
-                    <div class="dropdown">
-                        <button class="dropdown-btn">Partners <i class="fas fa-chevron-down"
-                                style="font-size: 0.8em;"></i></button>
-                        <div class="dropdown-content">
-                            <a href="csr.html">CSR Partnerships</a>
-                            <a href="compliance.html">Compliance</a>
-                            <a href="faq.html">Corporate FAQ</a>
-                        </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn">Partners <i class="fas fa-chevron-down"
+                            style="font-size: 0.8em;"></i></button>
+                    <div class="dropdown-content">
+                        <a href="csr.html">CSR Partnerships</a>
+                        <a href="compliance.html">Compliance</a>
+                        <a href="faq.html">Corporate FAQ</a>
                     </div>
+                </div>
 
-                    <a href="contact.html">Contact</a>
-                    <a href="#donation-form" class="btn btn-primary">Support a Cause</a>
-                </nav>
+                <a href="contact.html">Contact</a>
+                <a href="#donation-form" class="btn btn-primary">Support a Cause</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Acting Together for Stronger Communities Across India</h1>
+                    <p>ACT Foundation is a community-rooted non-profit organisation working across education, health,
+                        women empowerment, and environmental protection. We partner directly with local communities,
+                        grassroots organisations, volunteers, and responsible institutions to create sustainable and
+                        measurable social impact.</p>
+                    <p>Our work is grounded in the belief that real change begins at the community level—when people are
+                        informed, empowered, and supported to shape their own futures.</p>
+                    <div class="hero-buttons">
+                        <a href="#donation-form" class="btn btn-primary btn-lg">Support a Cause</a>
+                        <a href="contact.html" class="btn btn-outline btn-lg">Volunteer With Communities</a>
+                        <a href="csr.html" class="btn btn-outline btn-lg">CSR & Institutional Partnerships</a>
+                    </div>
+                </div>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section id="hero" class="hero-section">
-                <div class="container hero-content">
-                    <div class="hero-text">
-                        <h1>Acting Together for Stronger Communities Across India</h1>
-                        <p>ACT Foundation is a community-rooted non-profit organisation working across education,
-                            health, women empowerment, and environmental protection. We partner directly with local
-                            communities, grassroots organisations, volunteers, and responsible institutions to create
-                            sustainable and measurable social impact.</p>
-                        <p>Our work is grounded in the belief that real change begins at the community level—when people
-                            are informed, empowered, and supported to shape their own futures.</p>
-                        <div class="hero-buttons">
-                            <a href="#donation-form" class="btn btn-primary btn-lg">Support a Cause</a>
-                            <a href="contact.html" class="btn btn-outline btn-lg">Volunteer</a>
-                            <a href="contact.html" class="btn btn-outline btn-lg">CSR Partnerships</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="approach" class="content-section" style="background-color: var(--bg-light);">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Our Approach</h2>
-                        <div class="divider"></div>
-                        <p style="max-width: 800px; margin: 0 auto; text-align: center;">ACT Foundation works closely
-                            with communities to identify real needs and co-create solutions.</p>
-                    </div>
-                    <div class="features-grid" style="margin-top: 2rem;">
-                        <div class="feature-card">
-                            <i class="fas fa-users"></i>
-                            <h3>Community Participation</h3>
-                            <p>Community participation and ownership in every initiative.</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-hand-holding-usd"></i>
-                            <h3>Ethical Funds</h3>
-                            <p>Ethical use of funds and transparent reporting.</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-seedling"></i>
-                            <h3>Long-term Impact</h3>
-                            <p>Focus on long-term impact over short-term relief.</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-flag"></i>
-                            <h3>National Alignment</h3>
-                            <p>Alignment with India’s social development priorities.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="features" class="features-section">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Focus Areas</h2>
-                        <div class="divider"></div>
-                    </div>
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <i class="fas fa-book-reader"></i>
-                            <h3>Education</h3>
-                            <p>Improving access to quality education for children and youth from underserved communities
-                                through learning support, digital access, and community awareness.</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-heartbeat"></i>
-                            <h3>Health</h3>
-                            <p>Strengthening preventive healthcare, nutrition awareness, and access to basic health
-                                services, particularly for women and children.</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-female"></i>
-                            <h3>Women Empowerment</h3>
-                            <p>Enabling economic independence, health awareness, and leadership opportunities for women
-                                at the grassroots level.</p>
-                        </div>
-                        <div class="feature-card">
-                            <i class="fas fa-tree"></i>
-                            <h3>Environment</h3>
-                            <p>Promoting environmental responsibility through local action, awareness, and sustainable
-                                community practices.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about-snippet" class="content-section"
-                style="background-color: var(--bg-light); text-align: center;">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>About ACT Foundation</h2>
-                        <div class="divider"></div>
-                    </div>
-                    <p style="max-width: 800px; margin: 0 auto 1.5rem;">ACT Foundation is an India-based non-profit
-                        organisation committed to inclusive development and social equity. We work at the grassroots to
-                        address systemic challenges affecting education, health, gender equality, and environmental
-                        sustainability.</p>
-                    <a href="about.html" class="btn btn-secondary">Read More</a>
-                </div>
-            </section>
-
-            <section id="donation-form" class="donation-section">
-                <div class="container">
-                    <div class="donation-wrapper">
-                        <div class="donation-header-text">
-                            <h2>Support a Cause</h2>
-                            <p>Your contribution enables communities to access education, healthcare, dignity, and a
-                                healthier environment.</p>
-                        </div>
-                        <div class="donation-card">
-                            <form id="donateForm">
-                                <div class="form-section">
-                                    <label class="section-label">Choose Donation Amount (INR)</label>
-                                    <div class="amount-grid">
-                                        <button type="button" class="amount-btn" data-value="3000">₹3,000</button>
-                                        <button type="button" class="amount-btn active"
-                                            data-value="5000">₹5,000</button>
-                                        <button type="button" class="amount-btn" data-value="10000">₹10,000</button>
-                                        <input type="number" id="customAmount" class="amount-input"
-                                            placeholder="Other Amount">
-                                    </div>
-                                </div>
-
-                                <div class="form-section">
-                                    <label class="section-label">Personal Details</label>
-                                    <div class="form-grid">
-                                        <div class="form-group">
-                                            <input type="text" id="name" required placeholder="Full Name *">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" id="email" required placeholder="Email Address *">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="tel" id="mobile" required placeholder="Mobile Number *">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary btn-block btn-xl">Donate Now</button>
-                                <p class="tax-note"><i class="fas fa-info-circle"></i> All donations are eligible for
-                                    50% Tax Exemption under section 80G.</p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer id="main-footer" class="footer">
+        <section id="approach" class="content-section" style="background-color: var(--bg-light);">
             <div class="container">
-                <div class="footer-content">
-                    <p>&copy; 2025 ACT Foundation. All rights reserved.</p>
-                    <div class="footer-links">
-                        <a href="legal.html#privacy">Privacy Policy</a>
-                        <a href="contact.html">Contact Us</a>
-                        <a href="faq.html">FAQ</a>
-                        <a href="legal.html#terms">Terms & Conditions</a>
+                <div class="section-header">
+                    <h2>Our Approach</h2>
+                    <div class="divider"></div>
+                    <p style="max-width: 800px; margin: 0 auto; text-align: center;">ACT Foundation works closely with
+                        communities to identify real needs and co-create solutions. We focus on:</p>
+                </div>
+                <div class="features-grid" style="margin-top: 2rem;">
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Participation</h3>
+                        <p>Community participation and ownership in every initiative.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Ethical Funds</h3>
+                        <p>Ethical use of funds and transparent reporting.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Long-term Impact</h3>
+                        <p>Focus on long-term impact over short-term relief.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-flag"></i>
+                        <h3>National Alignment</h3>
+                        <p>Alignment with India’s social development priorities.</p>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Focus Areas</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>Education</h3>
+                        <p>Improving access to quality education for children and youth from underserved communities
+                            through learning support, digital access, and community awareness.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Health</h3>
+                        <p>Strengthening preventive healthcare, nutrition awareness, and access to basic health
+                            services, particularly for women and children.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-female"></i>
+                        <h3>Women Empowerment</h3>
+                        <p>Enabling economic independence, health awareness, and leadership opportunities for women at
+                            the grassroots level.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-tree"></i>
+                        <h3>Environment</h3>
+                        <p>Promoting environmental responsibility through local action, awareness, and sustainable
+                            community practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="donation-form" class="donation-section" style="background-color: var(--bg-light);">
+            <div class="container">
+                <div class="donation-card">
+                    <div class="section-header">
+                        <h2>Support Our Mission</h2>
+                        <div class="divider"></div>
+                        <p>Your contribution can change lives. Donate today.</p>
+                    </div>
+                    <form id="donateForm">
+                        <div class="form-group">
+                            <label>Choose Amount (₹)</label>
+                            <div class="amount-grid">
+                                <button type="button" class="amount-btn" data-value="1000">1,000</button>
+                                <button type="button" class="amount-btn active" data-value="5000">5,000</button>
+                                <button type="button" class="amount-btn" data-value="10000">10,000</button>
+                                <input type="number" id="customAmount" placeholder="Custom Amount" min="100">
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pan">PAN Card (for 80G)</label>
+                                <input type="text" id="pan">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Donate
+                            Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 ACT Foundation. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="legal.html#privacy">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="legal.html#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 

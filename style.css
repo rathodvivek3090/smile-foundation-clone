@@ -103,18 +103,21 @@ a {
 
 /* Header Styles */
 .header {
-    background-color: var(--white);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -122,6 +125,7 @@ a {
     font-weight: 700;
     font-family: var(--font-heading);
     color: var(--primary-color);
+    z-index: 1002;
 }
 
 .main-nav {
@@ -137,8 +141,34 @@ a {
     padding: 0.5rem 0;
 }
 
+.main-nav a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
 .main-nav a:not(.btn):hover {
     color: var(--primary-color);
+}
+
+.main-nav a:not(.btn):hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    z-index: 1002;
 }
 
 /* Dropdown Styles */
@@ -170,33 +200,45 @@ a {
     display: none;
     position: absolute;
     background-color: var(--white);
-    min-width: 200px;
-    box-shadow: var(--shadow-lg);
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     z-index: 1001;
-    border-radius: 8px;
+    border-radius: 12px;
     top: 100%;
     left: 0;
     overflow: hidden;
-    margin-top: 0.5rem;
-}
-
-.dropdown-content a {
-    color: var(--text-main);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    margin-left: 0;
-    font-size: 0.95rem;
-    transition: background 0.2s;
-}
-
-.dropdown-content a:hover {
-    background-color: var(--bg-light);
-    color: var(--primary-color);
+    margin-top: 1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: var(--text-main);
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    margin-left: 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f5f5f5;
+    transition: all 0.2s;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #fafafa;
+    color: var(--primary-color);
+    padding-left: 24px;
 }
 
 /* Hero Section */
@@ -443,7 +485,69 @@ a {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+        /* Behind logo/btn but above content */
+        transition: transform 0.3s ease-in-out;
+        padding: 2rem;
+        overflow-y: auto;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .main-nav a,
+    .dropdown {
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        width: auto;
+    }
+
+    .dropdown {
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+        display: none;
+        margin-top: 0.5rem;
+        animation: none;
+        transform: none;
+        opacity: 1;
+        min-width: 100%;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-btn {
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
     .amount-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -458,10 +562,6 @@ a {
 
     .hero-text h1 {
         font-size: 2.5rem;
-    }
-
-    .main-nav {
-        display: none;
     }
 }
 

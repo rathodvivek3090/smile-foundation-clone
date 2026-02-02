@@ -178,6 +178,17 @@ a {
     display: inline-block;
 }
 
+/* Invisible bridge to prevent dropdown closing when moving cursor */
+.dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    background: transparent;
+}
+
 .dropdown-btn {
     color: var(--secondary-color);
     font-weight: 500;

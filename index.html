@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate for Education - Smile Foundation Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <header id="main-header" class="header">
+            <div class="container header-content">
+                <div class="logo">Smile Foundation</div>
+                <nav class="main-nav">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="#donation-form" class="btn btn-primary">Donate Now</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <h1>Your support is crucial in ensuring education for all!</h1>
+                        <p>Childhood is said to be the best part of human life – an age where we are carefree, safe and
+                            happy. But a happy childhood is not the reality for many children, who are out-of-school.
+                        </p>
+                        <p>Smile Foundation, through its <strong>'Shiksha Na Ruke'</strong> initiative has been helping
+                            children from difficult circumstances continue their education, with the hope of a brighter
+                            future and better life.</p>
+                        <a href="#donation-form" class="btn btn-primary btn-lg">Donate Now</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="features-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Key Interventions Under Shiksha Na Ruke</h2>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-book-reader"></i>
+                            <h3>Education</h3>
+                            <p>Primary and Secondary education for children.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Health</h3>
+                            <p>Regular health check-ups & nutrition support.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Training</h3>
+                            <p>Training and capacity building of teachers.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-tools"></i>
+                            <h3>Skills</h3>
+                            <p>Vocational Education & Skill Training.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-music"></i>
+                            <h3>Holistic Growth</h3>
+                            <p>Music, sports, life skills education for well-being.</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-laptop"></i>
+                            <h3>Digital Literacy</h3>
+                            <p>Digital literacy and learning access to rural children.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="donation-form" class="donation-section">
+                <div class="container">
+                    <div class="donation-wrapper">
+                        <div class="donation-header-text">
+                            <h2>Support a Child's Education</h2>
+                            <p>Your contribution can change a life forever. Help us ensure no child is left behind.</p>
+                        </div>
+                        <div class="donation-card">
+                            <form id="donateForm">
+                                <div class="form-section">
+                                    <label class="section-label">Choose Donation Amount (INR)</label>
+                                    <div class="amount-grid">
+                                        <button type="button" class="amount-btn" data-value="3000">₹3,000</button>
+                                        <button type="button" class="amount-btn active"
+                                            data-value="5000">₹5,000</button>
+                                        <button type="button" class="amount-btn" data-value="10000">₹10,000</button>
+                                        <input type="number" id="customAmount" class="amount-input"
+                                            placeholder="Other Amount">
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <label class="section-label">Personal Details</label>
+                                    <div class="form-grid">
+                                        <div class="form-group">
+                                            <input type="text" id="name" required placeholder="Full Name *">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" id="email" required placeholder="Email Address *">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" id="mobile" required placeholder="Mobile Number *">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block btn-xl">Donate Now</button>
+                                <p class="tax-note"><i class="fas fa-info-circle"></i> All donations are eligible for
+                                    50% Tax Exemption under section 80G.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="main-footer" class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2025 Smile Foundation Clone. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

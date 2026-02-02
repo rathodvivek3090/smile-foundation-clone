@@ -255,7 +255,7 @@ a {
 /* Hero Section */
 .hero-section {
     padding: 8rem 0;
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.7)), url('images/hero-home.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -590,7 +590,7 @@ a {
     color: var(--white);
     padding: 6rem 0;
     text-align: center;
-    background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+    background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.8)), url('images/hero-page.jpg');
     background-size: cover;
     background-position: center;
 }

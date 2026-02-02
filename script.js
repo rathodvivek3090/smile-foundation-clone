@@ -59,15 +59,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // In a real app, this would redirect to payment gateway
-            alert(`Thank you ${name} for your generous donation of ₹${amount}! This is a demo, so no payment will be processed.`);
-            form.reset();
-            // Reset to default
-            if (amountBtns.length > 1 && amountBtns[1]) {
-                amountBtns[1].click(); // Select 5000 again
-            } else if (amountBtns.length > 0) {
-                amountBtns[0].click();
-            }
+            // Razorpay Integration
+            const options = {
+                "key": "rzp_test_ChangeThisToYourKey", // Replace with your actual Test Key ID
+                "amount": amount * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+                "currency": "INR",
+                "name": "ACT Foundation",
+                "description": "Donation for Social Cause",
+                "image": "https://example.com/your_logo.png", // Optional: Add logo URL if available
+                "handler": function (response) {
+                    alert(`Donation Successful! Payment ID: ${response.razorpay_payment_id}`);
+                    // Here you would typically send the payment ID to your backend for verification
+                    form.reset();
+                    // Reset to default
+                    if (amountBtns.length > 1 && amountBtns[1]) {
+                        amountBtns[1].click(); // Select 5000 again
+                    } else if (amountBtns.length > 0) {
+                        amountBtns[0].click();
+                    }
+                },
+                "prefill": {
+                    "name": name,
+                    "email": document.getElementById('email') ? document.getElementById('email').value : '',
+                    "contact": document.getElementById('phone') ? document.getElementById('phone').value : ''
+                },
+                "notes": {
+                    "address": "ACT Foundation Office"
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+            const rzp1 = new Razorpay(options);
+            rzp1.on('payment.failed', function (response) {
+                alert("Payment Failed. Code: " + response.error.code + ". Reason: " + response.error.description);
+            });
+            rzp1.open();
         });
     }
 

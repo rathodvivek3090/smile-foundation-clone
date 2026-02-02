@@ -488,6 +488,14 @@ a {
 @media (max-width: 900px) {
     .mobile-menu-btn {
         display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+    }
+
+    .header-content {
+        justify-content: center;
+        /* Center logo */
     }
 
     .main-nav {
@@ -499,12 +507,12 @@ a {
         height: 100vh;
         background-color: var(--white);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        /* Start from top */
         align-items: center;
         z-index: 1001;
-        /* Behind logo/btn but above content */
-        transition: transform 0.3s ease-in-out;
-        padding: 2rem;
+        padding: 5rem 2rem 2rem;
+        /* Top padding for close btn clearance */
         overflow-y: auto;
     }
 
@@ -517,14 +525,14 @@ a {
         margin-left: 0;
         margin-bottom: 1.5rem;
         font-size: 1.2rem;
-    }
-
-    .btn {
-        width: auto;
-    }
-
-    .dropdown {
+        width: 100%;
         text-align: center;
+    }
+
+    .dropdown-btn {
+        justify-content: center;
+        font-size: 1.2rem;
+        width: 100%;
     }
 
     .dropdown-content {
@@ -533,19 +541,19 @@ a {
         border: 1px solid #eee;
         display: none;
         margin-top: 0.5rem;
-        animation: none;
-        transform: none;
-        opacity: 1;
-        min-width: 100%;
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
     }
 
     .dropdown.active .dropdown-content {
         display: block;
-    }
-
-    .dropdown-btn {
-        justify-content: center;
-        font-size: 1.2rem;
+        opacity: 1;
+        transform: none;
     }
 
     .amount-grid {

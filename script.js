@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
             const nameInput = document.getElementById('name');
             const name = nameInput ? nameInput.value : 'Donor';
 
@@ -59,6 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            // Set loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Processing...';
+            }
+
             // Razorpay Integration
             const options = {
                 "key": "rzp_test_ChangeThisToYourKey", // Replace with your actual Test Key ID
@@ -66,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "currency": "INR",
                 "name": "ACT Foundation",
                 "description": "Donation for Social Cause",
-                "image": "https://example.com/your_logo.png", // Optional: Add logo URL if available
+                "image": "https://via.placeholder.com/150",
                 "handler": function (response) {
                     alert(`Donation Successful! Payment ID: ${response.razorpay_payment_id}`);
                     // Here you would typically send the payment ID to your backend for verification
@@ -76,6 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         amountBtns[1].click(); // Select 5000 again
                     } else if (amountBtns.length > 0) {
                         amountBtns[0].click();
+                    }
+                    // Reset button
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalBtnText;
+                    }
+                },
+                "modal": {
+                    "ondismiss": function () {
+                        // Reset button if user closes modal
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerText = originalBtnText;
+                        }
                     }
                 },
                 "prefill": {
@@ -90,11 +113,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     "color": "#3399cc"
                 }
             };
-            const rzp1 = new Razorpay(options);
-            rzp1.on('payment.failed', function (response) {
-                alert("Payment Failed. Code: " + response.error.code + ". Reason: " + response.error.description);
-            });
-            rzp1.open();
+
+            try {
+                const rzp1 = new Razorpay(options);
+                rzp1.on('payment.failed', function (response) {
+                    alert("Payment Failed. Code: " + response.error.code + ". Reason: " + response.error.description);
+                    // Reset button on failure
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = originalBtnText;
+                    }
+                });
+                rzp1.open();
+            } catch (err) {
+                console.error("Razorpay Error:", err);
+                alert("Something went wrong initializing payment. Please try again.");
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = originalBtnText;
+                }
+            }
         });
     }
 

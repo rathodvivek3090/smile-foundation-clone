@@ -123,13 +123,20 @@ a {
 .logo {
     display: flex;
     align-items: center;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
     z-index: 1002;
+    text-decoration: none;
 }
 
 .logo img {
-    height: 60px;
-    /* Adjusted for better visibility */
+    height: 50px;
     width: auto;
+    border-radius: 5px;
+    /* Optional: adds a slight curve if it's square */
 }
 
 .main-nav {

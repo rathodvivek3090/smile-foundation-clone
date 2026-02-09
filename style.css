@@ -648,6 +648,31 @@ a {
     color: var(--text-main);
 }
 
+.content-block p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.read-more-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.25rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.read-more-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
 .btn-outline {
     background-color: transparent;
     border: 2px solid var(--white);

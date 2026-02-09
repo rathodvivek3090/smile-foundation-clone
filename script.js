@@ -1,5 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('App Initialized v2');
+    renderNavbar();
+    renderFooter();
+    console.log('App Initialized v3');
+
+    function renderNavbar() {
+        const headerHtml = `
+        <div class="container header-content">
+            <div class="logo">
+                <img src="images/Act Foundation.png" alt="ACT Foundation">
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <a href="index.html" class="${window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/') ? 'active' : ''}">Home</a>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn" style="${['about.html', 'vision.html', 'how_we_work.html'].some(p => window.location.pathname.includes(p)) ? 'color: var(--primary-color);' : ''}">About <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></button>
+                    <div class="dropdown-content">
+                        <a href="about.html" class="${window.location.pathname.includes('about.html') ? 'active' : ''}">About Us</a>
+                        <a href="vision.html" class="${window.location.pathname.includes('vision.html') ? 'active' : ''}">Vision & Mission</a>
+                        <a href="how_we_work.html" class="${window.location.pathname.includes('how_we_work.html') ? 'active' : ''}">How We Work</a>
+                    </div>
+                </div>
+
+                <a href="Projects.html" class="${window.location.pathname.includes('Projects.html') ? 'active' : ''}">Projects</a>
+
+                <div class="dropdown">
+                    <button class="dropdown-btn" style="${['csr.html', 'compliance.html', 'faq.html'].some(p => window.location.pathname.includes(p)) ? 'color: var(--primary-color);' : ''}">Partners <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i></button>
+                    <div class="dropdown-content">
+                        <a href="csr.html" class="${window.location.pathname.includes('csr.html') ? 'active' : ''}">CSR Partnerships</a>
+                        <a href="compliance.html" class="${window.location.pathname.includes('compliance.html') ? 'active' : ''}">Compliance</a>
+                        <a href="faq.html" class="${window.location.pathname.includes('faq.html') ? 'active' : ''}">Corporate FAQ</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="${window.location.pathname.endsWith('contact.html') ? 'active' : ''}" style="${window.location.pathname.endsWith('contact.html') ? 'color: var(--primary-color);' : ''}">Contact</a>
+                <a href="index.html#donation-form" class="btn btn-primary">Support a Cause</a>
+            </nav>
+        </div>
+        `;
+        const headerPlaceholder = document.getElementById('main-header');
+        if (headerPlaceholder) {
+            headerPlaceholder.innerHTML = headerHtml;
+        }
+    }
+
+    function renderFooter() {
+        const footerHtml = `
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 ACT Foundation. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="legal.html#privacy">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="legal.html#terms">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+        `;
+        const footerPlaceholder = document.getElementById('main-footer');
+        if (footerPlaceholder) {
+            footerPlaceholder.innerHTML = footerHtml;
+        }
+    }
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
